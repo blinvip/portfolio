@@ -1,0 +1,86 @@
+/* Подключение шрифтов + классы для FontAwesome*/
+
+@font-face
+{
+    font-family: 'FiraSans-Regular';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('#{$font-path}/FiraSans-Regular.woff2') format('woff2'),
+    url('#{$font-path}/FiraSans-Regular.woff') format('woff'),
+    url('#{$font-path}/FiraSans-Regular.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'FiraSans-Bold';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('#{$font-path}/FiraSans-Bold.woff2') format('woff2'),
+    url('#{$font-path}/FiraSans-Bold.woff') format('woff'),
+    url('#{$font-path}/FiraSans-Bold.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'FiraSans-Light';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('#{$font-path}/FiraSans-Light.woff2') format('woff2'),
+    url('#{$font-path}/FiraSans-Light.woff') format('woff'),
+    url('#{$font-path}/FiraSans-Light.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'FiraSans-Medium';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('#{$font-path}/FiraSans-Medium.woff2') format('woff2'),
+    url('#{$font-path}/FiraSans-Medium.woff') format('woff'),
+    url('#{$font-path}/FiraSans-Medium.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('#{$fa-font-path}/fontawesome-webfont.woff2') format('woff2'),
+    url('#{$fa-font-path}/fontawesome-webfont.woff') format('woff'),
+    url('#{$fa-font-path}/fontawesome-webfont.ttf') format('truetype');
+}
+
+.fa {
+  display: inline-block;
+  @include font-size($nav__link-icon-font-sizes);
+  font-family: FontAwesome; // shortening font declaration
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-rendering: auto; // optimizelegibility throws things off #1094
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &--fw {
+    width: (18em / 14);
+    text-align: center;
+  }
+
+  &--briefcase:before {
+    content: $fa-var-briefcase;
+  }
+  &--rocket:before {
+    content: $fa-var-rocket;
+  }
+  &--user-secret:before {
+    content: $fa-var-user-secret;
+  }
+  &--download:before {
+    content:$fa-var-download;
+  }
+}

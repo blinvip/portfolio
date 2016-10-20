@@ -1,0 +1,83 @@
+.content
+{
+  &__wrapper {
+    @extend %clearfix;
+  }
+
+  &__left
+  {
+    float: left;
+    width: 300px;
+    text-align: center;
+  }
+
+  &__right {
+    float: right;
+    width: 380px;
+  }
+
+  &__title {
+    @include font-size($content__title-font-sizes);
+    @include Firasans(medium);
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    width: 380px;
+    color: $gray--dark;
+    @include font-size($description__text-font-sizes);
+    @include Firasans(light);
+    margin-bottom: 33px;
+  }
+}
+
+.photo {
+  display: inline-block;
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  &__img {
+    display: block; //чтобы убрать отступ снизу у картинки
+    width: 100%; //какого бы размера не пихали в верстку картинки, она никогда не вылезет за размеры родительского блока
+    height: 100%; //картинка будет растягиваться под размеры родительского блока
+  }
+}
+
+
+
+.text {
+  height: 345px;
+  overflow: auto;
+}
+
+.text p {
+  margin-bottom: 15px;
+}
+
+.download {
+  text-align: center;
+  &__link {
+    display: inline-block;
+    padding: 5px 5px;
+    color: $color-secondary;
+    border: 2px solid $color-secondary;
+    border-radius: 40px;
+  }
+
+  &__link-icon {
+
+  }
+
+  &__link-title {
+    margin-left: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 2; /* 28 ÷ 14 */
+  }
+}
+
+
+

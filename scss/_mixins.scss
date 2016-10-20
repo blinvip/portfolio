@@ -1,0 +1,98 @@
+//Использование в CSS @extend clearfix; в классе там, где нам нужно сбросит обтекание у следующего блока
+
+%clearfix
+{
+    &:before,
+    &:after
+    {
+        display: block;
+
+        content: "";
+    }
+    &:after
+    {
+        clear: both;
+    }
+}
+
+@mixin Firasans ($font-style: normal)
+{
+    @if $font-style == normal
+    {
+        font-family: 'FiraSans-Regular', sans-serif;
+    }
+    @else if($font-style == medium)
+    {
+        font-family: 'FiraSans-Medium', sans-serif;
+    }
+    @else if($font-style == light)
+    {
+        font-family: 'FiraSans-Light', sans-serif;
+    }
+    @else if ($font-style == bold)
+    {
+        font-family: 'FiraSans-Bold', sans-serif;
+    }
+}
+
+
+
+@function em($pixels, $context: $browser-context)
+{
+    @if (unitless($pixels))
+    {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context))
+    {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1em;
+}
+
+@function rem($pixels)
+{
+    @if (unitless($pixels))
+    {
+        $pixels: $pixels * 1px;
+    }
+    @return $pixels / 16px * 1rem;
+}
+
+// Utility function for mixin font-size
+@mixin make-font-size($fs-font-size) {
+    // If $fs-font-size is a list, include
+    // both font-size and line-height
+    @if type-of($fs-font-size) == "list" {
+        font-size: nth($fs-font-size, 1);
+        font-size: nth($fs-font-size, 1) / 16px * 1rem;
+        @if (length($fs-font-size) > 1) {
+            line-height: nth($fs-font-size, 2);
+        }
+    }
+    @else {
+        font-size: $fs-font-size;
+        font-size: $fs-font-size / 16px * 1rem;
+    }
+}
+
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+        @if $fs-breakpoint == null {
+            @include make-font-size($fs-font-size);
+        }
+        @else {
+            // If $fs-font-size is a key that exists in
+            // $fs-breakpoints, use the value
+            @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+                $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+            }
+            @media screen and (max-width: $fs-breakpoint) {
+                @include make-font-size($fs-font-size);
+            }
+        }
+    }
+}
+

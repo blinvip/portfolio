@@ -1,0 +1,12 @@
+body
+{
+  @include Firasans(normal);
+}
+.copyright
+{
+    font-size: rem(14px);
+    line-height: 2.86; /* 40 ÷ 14 */
+
+    @include Firasans(light);
+}
+

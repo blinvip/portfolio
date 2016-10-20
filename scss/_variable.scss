@@ -1,0 +1,73 @@
+//Оттенки серого
+$gray--lighter: #f6f6f6; //почти белый - цвет бэкграунда
+$gray--light: #9c9c9c; //цвет текста в футере
+$gray: #727272; //цвет описания пунков в карьере, цвет бордера аватар
+$gray--dark: #646464; //цвет параграфов
+$gray--darker: #5a5a5a; //цвет заголовков в карьере
+$gray--darkest: #414141; //цвет заголовков навигация, цвет фона футера
+
+//Семантические цвета
+$color-main: #33c1e3; // основной цвет
+$color-secondary: #e85f61; // дополнительный цвет
+
+//Переменные
+$img-path: "../img";
+
+//Шрифты
+$font-path: "../fonts";
+$browser-context: 16;
+
+//Таблица брэйкпоинтов
+$breakpoints: (
+  desktop:  1200px,
+  notebook: 992px,
+  tablet:   768px,
+  phone:    480px,
+);
+
+/*
+Пример создания мапов для изменения шрифтов
+$p-font-sizes: (
+        null  : (20px, 1.3),
+        desktop : 16px,
+        notebook: (17px, 1.4),
+        800px : 18px,
+        tablet : (19px, 1.45),
+        600px: 20px,
+        phone: 11px,
+);
+*/
+
+$avatar__name-font-sizes: (
+       null  : (18px, 28px / 18px),
+       phone:  (14px, 21px / 14px),
+);
+
+$contacts__trigger-font-sizes: (
+       null  : (18px, 28px / 18px),
+);
+
+$nav__link-title-font-sizes: (
+       null  : (18px, 24px / 18px),
+       phone  : (14px, 24px / 14px),
+);
+
+$content__title-font-sizes: (
+       null: (35px, 45px / 35px),
+);
+
+$nav__link-icon-font-sizes: (
+       null: (18px, 24px / 18px),
+);
+
+$description__text-font-sizes: (
+       null: (18px, 26px / 18px),
+       phone  : (16px, 24px / 16px),
+);
+
+//Шрифты FontAwesome
+$fa-font-path: "../fonts/font-awesome";
+$fa-var-briefcase: "\f0b1";
+$fa-var-rocket: "\f135";
+$fa-var-user-secret: "\f21b";
+$fa-var-download: "\f019";

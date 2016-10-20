@@ -1,1 +1,9 @@
 .idea
+_design/
+.DS_Store
+Thumbs.db
+*.sublime*
+*.log
+*.psd
+*.ai
+css/

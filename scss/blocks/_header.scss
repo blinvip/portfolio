@@ -1,0 +1,57 @@
+.header {
+  height: 80px;
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+
+  &__left {
+    float: left;
+    width: 470px;
+  }
+
+  &__right {
+    float: right;
+    width: 470px;
+    text-align: right;
+    }
+}
+
+.avatar {
+  margin-top: 10px;
+  font-size: 0;
+
+  &__img-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px; //ограничивающие размеры
+    height: 60px;
+    overflow: hidden;
+    border: 1px solid $gray;
+    border-radius: 50%;
+  }
+
+  &__img {
+    display: block; //чтобы убрать отступ снизу у картинки
+    width: 100%; //какого бы размера не пихали в верстку картинки, она никогда не вылезет за размеры родительского блока
+    height: 100%; //картинка будет растягиваться под размеры родительского блока
+  }
+
+  &__name {
+    display: inline-block;
+    margin-left: 19px;
+    vertical-align: middle;
+    @include font-size($avatar__name-font-sizes);
+  }
+}
+
+.contacts {
+  &__trigger
+  {
+    overflow: hidden;
+    @include font-size($contacts__trigger-font-sizes);
+    line-height: 4.44; /* (80px : 18px) */
+    @include Firasans(bold);
+    text-overflow: ellipsis;
+    color: $color-main;
+    background: url('#{$img-path}/decor/decor.png') repeat-x left bottom;
+  }
+}

@@ -1,0 +1,22 @@
+//Если нужно сжать, то добавляем в file watcher --style compressed
+
+//подключаем переменные и миксины
+@import './variable.scss';
+@import './_mixins.scss';
+
+//подключаем normalize и основные настройки шаблона
+@import 'global/_normalize.scss';
+@import 'global/_adjustments.scss';
+
+//подключаем шрифты
+@import 'global/_font.scss';
+@import 'global/fa';
+
+//настройка шрифтов
+@import 'global/_typography.scss';
+
+//подключаем блоки
+@import 'blocks/_header.scss';
+@import 'blocks/_maincontent.scss';
+@import 'blocks/_sidebar.scss';
+@import 'blocks/_content.scss';

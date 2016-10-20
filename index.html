@@ -3,103 +3,118 @@
 <head>
   <title>Bogdan Blinov</title>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"
   <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
-  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=960">
   <meta name="description" content="Портфолио">
   <meta name="keywords" content="БЭМ, верстка, портфолио, CSS">
   <meta name="author" content="Богдан Блинов">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700&amp;subset=cyrillic-ext" rel="stylesheet">
 </head>
 <body>
+<!--[if lte IE 9]>
+  <p class="browserhappy">Похоже, что ты используешь устаревший браузер, друг. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">скачай новый></a></p>
+<![endif]-->
+
 <div class="wrapper">
   <header class="header">
-    <div class="container">
-      <div class="header__left">
+      <div class="container">
+        <div class="header__left">
         <div class="avatar">
           <div class="avatar__img-wrapper">
-            <img class="avatar__img" src="img/content/avatar.png" alt="Мое фото">
-            </div>
-            <div class="avatar__name">
-              <span class="avatar__name-text">Богдан Блинов</span>
-            </div>
+            <img class="avatar__img" src="img/content/avatar.png" width="60px" height="60px" alt="Мое фото">
+          </div>
+          <div class="avatar__name">
+            <span class="avatar__name-text">Богдан Блинов</span>
+          </div>
         </div>
       </div>
-      <div class="header__right">
-          <div class="contacts">
-            <a href="#" class="contacts__trigger">Мои контакты</a>
-            <ul class="contacts__dropdown-menu">
-              <li class="contacts__dropdown-item">
-                <a href="#" class="dropdown-link"></a>
-              </li>
-              <li class="contacts__dropdown-item">
-                <a href="#" class="dropdown-link"></a>
-              </li>
-              <li class="contacts__dropdown-item">
-                <a href="#" class="dropdown-link"></a>
-              </li>
-            </ul>
-          </div>
-      </div>
-    </div>
-  </header>
-  <section class="section">
-    <div class="container">
-      <aside class="sidebar">
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-                <a href="" class="nav__link">
-                  <span class="nav__link-icon"></span>
-                  <span class="nav__link-text">Обо мне</span>
-                </a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="nav__link">
-                <span class="nav__link-icon"></span>
-                <span class="nav__link-title">Карьерный путь</span>
+        <div class="header__right">
+        <div class="contacts">
+          <a href="#" class="contacts__trigger">Мои контакты</a>
+          <ul class="contacts__dropdown-menu">
+            <li class="contacts__dropdown-item">
+              <a href="#" class="dropdown-link">
+
               </a>
             </li>
-            <li class="nav_item">
-              <a href="" class="nav__link">
-                <span class="nav__link-icon"></span>
-                <span class="nav__link-title">Портфолио</span>
+            <li class="contacts__dropdown-item">
+              <a href="#" class="dropdown-link">
+
+              </a>
+            </li>
+            <li class="contacts__dropdown-item">
+              <a href="#" class="dropdown-link">
+
               </a>
             </li>
           </ul>
-        </nav>
-      </aside>
-      <main class="content">
-        <div class="content__wrapper">
-          <div class="content__item">
-            <div class="photo__img-wrapper">
-              <img class="photo__img" src="img/content/photo.jpg" alt="Мое фото">
-            </div>
-          </div>
-          <div class="content__item">
-            <h1 class="content__title">Обо мне</h1>
-            <div class="description">
-              <div class="description__text">
-                <p>Привет. Я сверстал эту страницу с именами классов по БЭМ.
-                Если видишь мои косяки, поправь меня, пожалуйста.</p>
-              </div>
-              <div class="description__text">
-                <p>Это моя первая верстка. О БЭМе читал несколько статей на хабре и смотрел
-                  вебинары.</p>
-              </div>
-              <div class="description__text">
-                <p>Стоит ли каждый параграф оборачивать в блок? Или это избыточно?</p>
-              </div>
-            </div>
-            <div class="download">
-              <a class="download__link" href="" >
-                <span class="download__link-icon"></span>
-                <span class="download__link-title">Скачать</span>
-              </a>
-            </div>
-          </div>
         </div>
-      </main>
-    </div>
-  </section>
+      </div>
+      </div>
+  </header>
+  <div class="maincontent">
+    <section class="section">
+      <div class="container">
+        <aside class="sidebar">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item nav__item--active">
+                <a href="#" class="nav__link">
+                  <span class="nav__link-icon">
+                    <i class="fa fa--user-secret" aria-hidden="true"></i>
+                  </span>
+                  <span class="nav__link-title">Обо мне</span>
+                </a>
+                </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <span class="nav__link-icon">
+                    <i class="fa fa--rocket" aria-hidden="true"></i>
+                  </span>
+                  <span class="nav__link-title">Карьерный путь</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <span class="nav__link-icon">
+                    <i class="fa fa--briefcase" aria-hidden="true"></i>
+                  </span>
+                  <span class="nav__link-title">Портфолио</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <main class="content">
+          <div class="content__wrapper">
+            <div class="content__left">
+              <div class="photo">
+                <img class="photo__img" src="img/content/photo.jpg" width="220px" height="220px" alt="Мое фото">
+              </div>
+            </div>
+            <div class="content__right">
+              <h1 class="content__title">Обо мне</h1>
+              <div class="content__description">
+                  <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda corporis, dolorum error eveniet facere fuga fugit iure, necessitatibus porro, quaerat qui quibusdam suscipit temporibus.Привет. Это пока только статичная верстка.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium animi delectus, dolorum non praesentium repudiandae similique vitae. At atque eius fuga impedit iste. Veniam!Если видишь ошибки, поправь меня пожалуйста.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aut autem cupiditate dolores dolorum facere facilis, molestiae, obcaecati, officiis omnis pariatur quas quos sint.Делаю адаптив.</p>
+                  </div>
+              </div>
+              <div class="download">
+                <a class="download__link" href="#">
+                  <span class="download__link-icon"><i class="fa fa--download" aria-hidden="true"></i></span>
+                  <span class="download__link-title">Скачать резюме</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+  </div>
 </div>
 <footer class="footer">
   <div class="container">
